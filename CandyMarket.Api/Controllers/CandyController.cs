@@ -29,7 +29,7 @@ namespace CandyMarket.Api.Controllers
         }
 
         [HttpGet("{candyId}")]
-        public Candy Get(Guid candyId)
+        public Candy Get(int candyId)
         {
             return _repo.GetAllCandy().FirstOrDefault(candy => candy.Id == candyId);
         }

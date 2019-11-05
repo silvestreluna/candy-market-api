@@ -10,5 +10,7 @@ namespace CandyMarket.Api.Repositories
         IEnumerable<Candy> GetAllCandy();
         bool AddCandy(AddCandyDto newCandy);
         bool EatCandy(int candyIdToDelete);
+        bool DonateCandy(int candyIdToDonate);
+
     }
 }

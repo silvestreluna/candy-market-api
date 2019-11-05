@@ -45,5 +45,18 @@ namespace CandyMarket.Api.Repositories
                 return db.Execute(sql, new { candyId = candyIdToDelete }) == 1;
             }
         }
+
+        public bool DonateCandy(int candyIdToDonateId)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"UPDATE Candy
+                            set [IsDonate] = @isDondated
+                            WHERE Id = @id ";
+
+                return db.Execute(sql, new { isDondated = 1, id = candyIdToDonateId }) == 1;
+
+            }
+        }
     }
 }

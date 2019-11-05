@@ -9,5 +9,7 @@ namespace CandyMarket.Api.DataModels
         public string Type { get; set; }
         public string Flavor { get; set; }
         public string Owner { get; set; }
+
+        public bool IsDonate { get; set; }
     }
 }

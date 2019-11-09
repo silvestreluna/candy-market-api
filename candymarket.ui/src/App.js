@@ -1,5 +1,6 @@
 import React from 'react';
 import Candies from './Components/Candies/Candies'
+import AddCandy from './Components/AddCandy/AddCandy'
 import './App.css';
 
 class App extends React.Component {
@@ -12,8 +13,7 @@ class App extends React.Component {
         </div>
 
         <div>
-          <button className="btn btn-danger">Delete</button>
-          <button>Add</button>
+          <AddCandy />
         </div>
       </div>
     );

@@ -22,6 +22,13 @@ class AddCandy extends React.Component {
     respFromdbNewCandy: {}
   }
 
+  updateStateValues = (e) => {
+    const inputFieldName = e.target.name
+    const inputFieldValue = e.target.value;
+    tempCandyObj[inputFieldName] = inputFieldValue;
+    this.setState({ newCandy: tempCandyObj });
+  }
+
   addNewCandyToDB = () => {
 
     const { newCandy } = this.state;
@@ -32,6 +39,7 @@ class AddCandy extends React.Component {
         this.setState({ respFromdbNewCandy: JSON.parse(newCandyAddedToDb) });
         this.props.getData();
         this.setState({ newCandy: tempCandyObjEmpty });
+        this.clearForm();
         this.displayNewCandyAdded();
       })
       .catch(err => console.error(err));
@@ -42,17 +50,14 @@ class AddCandy extends React.Component {
     console.error(candy.name);
   }
 
-  updateStateValues = (e) => {
-    const inputFieldName = e.target.name
-    const inputFieldValue = e.target.value;
-    tempCandyObj[inputFieldName] = inputFieldValue;
-    this.setState({ newCandy: tempCandyObj });
+  clearForm = () => {
+    document.getElementById("new-candy-form").reset();
   }
 
   render() {
     return (
       <div>
-        <form onChange={this.updateStateValues}>
+        <form id="new-candy-form" onChange={this.updateStateValues}>
           <h5>New Candy: </h5>
           <div>
             <label>Name</label>

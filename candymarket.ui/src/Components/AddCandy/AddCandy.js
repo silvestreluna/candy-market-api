@@ -47,7 +47,8 @@ class AddCandy extends React.Component {
 
   displayNewCandyAdded = () => {
     const candy = this.state.respFromdbNewCandy
-    console.error(candy.name);
+    // show new candy added
+    console.error(candy)
   }
 
   clearForm = () => {

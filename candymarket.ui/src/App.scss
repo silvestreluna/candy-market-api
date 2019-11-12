@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #1c263c;
+    color: white;
+  }
+
+  .bck-img {
+    width: 100%;
+    background: url("https://wikiclipart.com/wp-content/uploads/2016/11/Halloween-candy-clipart-free-clip-art-images-image-1-4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+  .new-candy-form {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f3f3;
+  }
+}

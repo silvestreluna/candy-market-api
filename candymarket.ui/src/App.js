@@ -4,11 +4,11 @@ import AddCandy from './Components/AddCandy/AddCandy'
 import getCandies from './helper/data/getCandies';
 import dltData from './helper/data/deleteCandy';
 
-import './App.css';
+import './App.scss';
 
 class App extends React.Component {
   state = {
-    allCandies: []
+    allCandies: [],
   }
 
   getData = () => {
@@ -36,14 +36,19 @@ class App extends React.Component {
     return (
       <div className="App">
         <div>
-          <h1>Candy Market</h1>
+          <div className="header">
+            <h1>Candy Market</h1>
+            <div className="bck-img"></div>
+          </div>
+
+          <div className="new-candy-form">
+            <AddCandy getData={this.getData} />
+          </div>
+
           <Candies allCandies={this.state.allCandies}
-          deleteCandy={this.deleteCandy} />
+            deleteCandy={this.deleteCandy} />
         </div>
 
-        <div>
-          <AddCandy getData={this.getData} />
-        </div>
       </div>
     );
   }

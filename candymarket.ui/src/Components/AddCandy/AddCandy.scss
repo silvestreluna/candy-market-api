@@ -1,0 +1,23 @@
+.addCandy {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 20px;
+
+  color: #a12720;
+  font-family: sans-serif;
+
+  .input-fields {
+    div {
+      display: flex;
+      padding: .8em ;
+      label {
+        padding: .5em 1em .5em 0;
+        flex: .2;
+      }
+      input {
+        padding: .3em;
+        flex: 2;
+      }
+    }
+  }
+}
